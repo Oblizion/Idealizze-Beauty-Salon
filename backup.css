@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 50px;
+    /* text-transform: uppercase; */
+    letter-spacing: 4px;
+    font-family: Great Vibes;
+  }
+  
+  nav {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    height: 15vh;
+    z-index: 2;
+    position: sticky;
+  }
+  
+  nav.logo2 {
+    align-items: center;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    width: 140px;
+    height: 132px;
+    text-align: center;
+    line-height: 115px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  .nav-list li a{
+    padding: 30px 30px;
+    margin-right: 5px;
+  }
+  
+  .nav-list li a:hover {
+  
+    cursor: pointer;
+    background-color: rgb(233, 231, 231);
+    transition-duration: 0.2s;
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  nav ul .linhadelogin:hover {
+    opacity:unset!important;
+    background-color: unset!important;
+    transition-duration: unset!important;
+    -moz-box-shadow: unset!important;
+    -webkit-box-shadow: unset!important;
+    box-shadow: unset!important;
+    margin: unset!important;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 15vh;
+      right: 0;
+      width: 50vw;
+      height: 85vh;
+      background: #ffffff;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  
+  .banner-contato {
+    background-image: url(bannercontato.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    position: relative;
+  }
+  .banner-contato hr {
+    position: absolute;
+    height: 7px;
+    width: 50px;
+    bottom: -4px;
+    left: 20%;
+    border: none;
+    background: #f3c618;
+  }
+  /*-------------------------------------------------------------------
+  --------------------------------------------------------------------
+  ---------------------------------------------------------------------*/
+  
+  .bannerPrincipal .slider,
+  .bannerPrincipal .slides {
+    height: calc(100vh - 100px) !important;
+  }
+  .slider {
+    position: relative;
+    height: 400px;
+    width: 100%;
+  }
+  .slider .slides li {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+  }
+  .bannerPrincipal .slider .slides li img {
+    background-position: bottom;
+  }
+  .slider .slides li img {
+    width: 100%;
+    background-position: center;
+    object-fit: cover;
+    margin-top: -221px;
+  }
+  img {
+    border-style: none;
+  }
+  /*-------------------------------------------------------------------
+  --------------------------------------------------------------------
+  ---------------------------------------------------------------------*/
+  .sobre {
+    background-image: url(bg-sobre.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    height: 400px;
+    width: 100%;
+  }
+  .sobre .container {
+    width: 65%;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+  }
+  .row {
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Open Sans',sans-serif;
+  }
+  .row .col {
+    float: left;
+    box-sizing: border-box;
+    min-height: 1px;
+    padding-left: 46px;
+  }
+  p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  .sobre h1 {
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    padding-top: 80px;
+    font-weight: 750;
+    line-height: 1.7rem;
+  }
+  
+  .sobre p {
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  .sobre h1 b {
+    color: #f3c618;
+  }
+  .row .col.l2 {
+    width: 16.6666666667%;
+  }
+  .row .col.l1, .row .col.l10, .row .col.l11, .row .col.l12, .row .col.l2, .row .col.l3, .row .col.l4, .row .col.l5, .row .col.l7, .row .col.l8, .row .col.l9 {
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  .sobre .mid {
+    padding-top: 128px;
+    font-size: 14rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'Bickham' , 'Times New Roman', Times, serif;
+    line-height: 10px;
+  }
+  .sobre a.btHistoria {
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: .7rem;
+    text-transform: uppercase;
+    border-radius: 20px;
+    transition: .3s;
+    text-align: center;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  
+  /*-----------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------------------------------*/
+  
+  .campanha {
+    background: rgb(43, 41, 41);
+    padding: 50px 50px;
+  }
+  
+  .textoCampanha {
+    color: ivory;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  .textoCampanha h1, h2 {
+   text-transform: uppercase;
+   font-family: Alumni Sans;
+  }
+  
+  .textoCampanha h2 {
+    margin-top: 1.4%;
+    margin-bottom: 1%;
+  }
+  
+  .textoCampanha h1 {
+    font-size: 30pt;
+  }
+  
+  .textoCampanha p {
+    font-size: 15pt;
+    font-family: Archivo Narrow;
+  }
+  
+  
